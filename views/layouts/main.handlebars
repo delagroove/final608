@@ -40,7 +40,7 @@ L.tileLayer(mapboxUrl, {
   //  .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
   //  .openPopup();
 
-var geojsonLayer = new L.GeoJSON.AJAX("comunas-cali.json");       
+var geojsonLayer = new L.GeoJSON.AJAX("comunas-cali.geojson");       
 geojsonLayer.addTo(map);
 
 map.panTo(new L.LatLng(3.359889, -76.638565));
