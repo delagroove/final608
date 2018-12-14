@@ -1,16 +1,26 @@
 <div class="mainC">
 <h2>Education coverage for private colleges in Cali, Colombia</h2>
-<h4>2015 / <a href="2016">2016</a></h4>
+<h4><a href="/">2015</a> / 2016</h4>
 
 <p>By exploring the distribution of Private college students in Cali and the density of the young vulnerable population, we are checking on possible patterns that allow us to determine better policy for the city. </p>
-<p>Universe: 116560 students</p>
+<p>Universe: 136470 students</p>
 <a href="#about" class="about_link">About</a>
 
 </div>
-    <div id="map" class="map">
+<div id="map" class="map">
 
 </div>
- <script>
+
+<script>
+    
+//mapboxgl.accessToken = 'pk.eyJ1IjoiYWx2YXJvYnVlbm8iLCJhIjoiY2pvMWxlYXZhMGJzZzNxa3U4Z2JyMHo3NSJ9.OjR7xwv7mOYZShA59Suykg';
+//var map = new mapboxgl.Map({
+//    container: 'map', // container id
+//    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+//    center: [-76.638565,  3.359889], // starting position [lng, lat]
+//    zoom: 13 // starting zoom
+//});
+
 
 function getColor(d) {
     return d > 14000 ? '#8c2d04' :
@@ -88,9 +98,9 @@ $.ajax({
             onEachFeature: onEachFeature,
             style: function (feature) {
             return {
-                color: getColor(pop_2015[feature.properties.comuna]),
+                color: getColor(pop_2016[feature.properties.comuna]),
                
-                fill: getPattern(conflict_2015[feature.properties.comuna]),
+                fill: getPattern(conflict_2016[feature.properties.comuna]),
                 dashArray: '',
                 fillOpacity: 0.6
                 
@@ -160,7 +170,6 @@ legend.onAdd = function (map) {
             );
     }
 
-
     return div;
 };
 
@@ -178,10 +187,10 @@ info.onAdd = function (map) {
 info.update = function (props) {
     console.log(props);
     this._div.innerHTML = '<h3>People in this district</h3>' +  (props ?
-        '<b>Comuna ' + props.comuna + '</b><br />' + pop_2015[props.comuna] + ' people<br><b>Conflict Victims</b><br/>' + conflict_2015[props.comuna]
+        '<b>Comuna ' + props.comuna + '</b><br />' + pop_2016[props.comuna] + ' people<br><b>Conflict Victims</b><br/>' + conflict_2016[props.comuna]
         : 'Hover over a district (Comuna)');
 };
 
 info.addTo(map);
 
-</script>   
+</script>
