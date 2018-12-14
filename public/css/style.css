@@ -45,11 +45,12 @@ h2, h4{
 
 #about h2, #about h4 {
     font-family: Verdana;
-    color: #cc4c02;
+    color: orange;
+    letter-spacing: -1px
 }
 #about p{
-    font-family: Verdana;
-    font-size: 10px;
+    font-family: Arial;
+    font-size: 12px;
 }
 
 .legend {
