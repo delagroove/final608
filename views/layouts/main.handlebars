@@ -41,7 +41,7 @@
         <h4>Caveats, Challenges</h4>
         <p>It was easier to recreate the District areas than to obtain the most exact ones from the GIS city department because it involved a coordinates conversion. The engineers at the GIS department sent me instructions to convert them in arcGIS and other windows software, I ended up using <a href="http://geojson.io/#map=12/3.4189/-76.5229">GeoJson Mapper</a> as it was easier and had some work done by the point i got the responses.</p>
         <p>There were other interesting colums to explore with but there was no codification for the values anywhere. Again, communication seemed a big issue when the team that produced the data is unavailable and it's not marked correctly. </p>
-        <p>With the 'Conflict Victim' value, there's an easy way to determine the outliers and consider them the 'yes' values, most people in the city will be in the 'no' value.</p>
+        <p>With the 'Conflict Victim' value, there's an easy way to determine the outliers and consider them the 'yes' values, most people in the city will be in the 'no' value. With 5 possible values (1,2,3,4 and 9), 9 will repeat north of 90%, in consequence it's safe to assume that the other values are the ones used to code this parameter with certain scale.</p>
         <p>I'm using a Leaflet plugin (leaflet-polygon.fillPattern.js) that allows textures to blend in, to discover that fill and fillColor are mutually exclusive, at least with the usage of this plugin. that's something that it will enhance the color identification experience and will allow more patterns and blend with colors properly.</p>
 
     </div>
